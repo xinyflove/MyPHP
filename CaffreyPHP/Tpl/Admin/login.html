@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" href="./Public/css/login.css" />
+	<script src="./public/js/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#submit').click(function(){
+			$('#user_info').html('');
+			$('#pawd_info').html('');
+			$('#all_info').html('');
+			uname = $('#uname').val();
+			upasswd = $('#upasswd').val();
+			if(uname == '' || upasswd == '')
+			{
+				if(uname == '') $('#user_info').html('*请输入邮箱/手机号/用户名');
+				if(upasswd == '') $('#pawd_info').html('*请输入密码');
+				return;
+			}
+
+			$.post("index.php?c=admin&m=login",
+			  {
+			    uname:uname,
+			    upasswd:upasswd
+			  },
+			  function(data,status){
+			  	if(status == 'success')
+			  	{
+			  		if(data == '1') 
+			  		{
+			  			$('#all_info').html("<span class='success'>√登录成功</span>");
+			  			setTimeout(window.location.href="index.php?c=admin",3000);
+			  		}
+			  		else
+			  		{
+			  			$('#all_info').html("<span class='error'>*用户名密码错误</span>");
+			  		} 
+			  	}
+			  	else
+			  	{
+			  		$('#all_info').html("<span class='error'>*信息提交失败</span>");
+			  	}
+			  });
+		});
+	});
+	</script>
+</head>
+<body>
+<div class="login_box">
+	<div class="login">
+	<form id="commentForm" method="post" action="">
+		<div class="login_img"></div>
+		<div class="text"><span>SmallPeak CMS Login</span></div>
+		<div class="tip" id='all_info'>
+			
+		</div>
+		<div class="user info">
+			<span></span>
+			<input id='uname' type="text" placeholder='邮箱/手机号/用户名' />
+		</div>
+		<div class="tip">
+			<span class='error' id="user_info"></span>
+		</div>
+		<div class="pawd info">
+			<span></span>
+			<input id='upasswd' type="password" placeholder='··········' />
+		</div>
+		<div class="tip">
+			<span class='error' id='pawd_info'></span>
+		</div>
+		<div class="btn info" id='submit'>Login</div>
+	</form>
+	</div>
+</div>
+
+<!-- 	<form action="index.php?c=admin&m=login" method="post">
+<table>
+	<tr>
+		<th colspan="2">用户登录</th>
+	</tr>
+	<tr>
+		<td>用户名</td>
+		<td><input type="text" name="uname" /></td>
+	</tr>
+	<tr>
+		<td>密码</td>
+		<td><input type="password" name="upasswd" /></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input type="submit" value="登录" />
+		</td>
+	</tr>
+</table>
+</form> -->
+</body>
+</html>

@@ -1,0 +1,30 @@
+{include file="index/header.html" title=mydemo}
+	<table>
+		{foreach $data as $v}
+		<tr>
+			<td>标题</td>
+			<td>
+			<a href="index.php?c=index&m=newsshow&id={$v.id}">{$v.title}</a>
+			</td>
+			<td>作者</td>
+			<td>{$v.author}</td>
+			<td>发布时间</td>
+			<td>{$v.dateline}</td>
+			<td>分类</td>
+			<td>{$v.from}</td>
+		</tr>
+		<tr colspan="4">
+			<td>内容</td>
+			<td>{$v.content}</td>
+		</tr>
+		{foreachelse}
+		<tr>
+			<td colspan="4">暂无文章</td>
+		</tr>
+		<br />
+		{/foreach}
+	</table>
+	<hr />
+		{$page}
+</body>
+</html>

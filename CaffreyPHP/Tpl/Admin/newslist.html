@@ -1,0 +1,32 @@
+{include file="Admin/header.html" title='新闻列表'}
+<a href="index.php?c=admin&m=newsadd">添加新闻</a><br /><br />
+	
+	<table>
+		<tr>
+			<th colspan="4">新闻列表</th>
+		</tr>
+		<tr>
+			<td>ID</td>
+			<td>标题</td>
+			<td>作者</td>
+			<td>操作</td>
+		</tr>
+		{foreach $data as $v}
+		<tr>
+			<td>{$v.id}</td>
+			<td>{$v.title}</td>
+			<td>{$v.author}</td>
+			<td>
+				[<a href="index.php?c=admin&m=newsadd&id={$v.id}">修改</a>]
+				[<a href="index.php?c=admin&m=newsdel&id={$v.id}">删除</a>]
+			</td>
+		</tr>
+		{foreachelse}
+		<tr>
+			<td colspan="4">暂无新闻</td>
+		</tr>
+		{/foreach}
+	</table>
+	<p>{$page}</p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* login css */
+body {margin: 0;background-color: #988fac;}
+.login_box {width: 800px; height: 650px; margin: 0px auto;overflow: hidden;
+background: -webkit-linear-gradient(left,#988fac,#cdd0c6,#988fac);
+background: -moz-linear-gradient( left,#988fac,#cdd0c6,#988fac);
+background: -o-linear-gradient(left,#988fac,#cdd0c6,#988fac);
+}
+.login {width: 300px; height: 300px; margin: 150px auto;}
+.text {font-size: 24px; color: #fff; width: 300px; text-align: center; margin: 20px auto;}
+.login_img {background: url(../images/admin/login_img.png); width: 48px; height: 48px; margin: 20px auto;}
+
+.btn {width: 248px; height: 38px; border-radius: 5px;color: #fff;text-align: center; margin: 0 auto;
+line-height: 38px; font-family: Arial; font-size: 18px;cursor: pointer; border: 2px solid #7a7a7a;
+background: -webkit-linear-gradient(top, #ff9352 19px, #ff6a30 19px);
+}
+
+.user {width: 248px; height: 38px; border-radius: 5px;color: #fff;text-align: center; margin: 0 auto;
+line-height: 38px; font-family: Arial; font-size: 18px; border: 2px solid #7a7a7a;
+background: #a0a29a;
+}
+.user span {background: url(../images/admin/user.png); width: 12px; height: 12px; display: inline-block;margin-right: 5px;}
+.pawd {width: 248px; height: 38px; border-radius: 5px;color: #fff;text-align: center; margin: 0 auto;
+line-height: 38px; font-family: Arial; font-size: 18px; border: 2px solid #7a7a7a;
+background: #a0a29a;
+}
+.pawd span {background: url(../images/admin/pawd.png); width: 12px; height: 12px; display: inline-block;margin-right: 5px;}
+.login_box input {outline: 0; background: #a0a29a;border: 0; font-size: 14px; width: 200px; color: #fff; }
+.login_box .login .info:hover{border: 2px solid #22aee4;}
+.tip {width: 252px;height: 20px;text-align: center;margin: 0 auto;}
+.error {color: red}
+.success {color: green}
+/*输入框提示信息css*/
+/* WebKit browsers */
+::-webkit-input-placeholder {
+	color: #fff;
+}
+/* Mozilla Firefox 4 to 18 */
+:-moz-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+/* Mozilla Firefox 19+ */
+::-moz-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+/* Internet Explorer 10+ */
+:-ms-input-placeholder {
+	color: #fff;
+}
+

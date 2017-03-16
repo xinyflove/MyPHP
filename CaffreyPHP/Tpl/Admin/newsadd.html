@@ -1,0 +1,51 @@
+{include file="Admin/header.html" title='添加新闻'}
+<script src="./public/js/ckeditor/ckeditor.js"></script>
+<script src="./public/js/ckeditor/adapters/jquery.js"></script>
+{literal}
+<script>
+$(document).ready(function(){
+	$('#content').ckeditor();
+});
+</script>
+{/literal}
+	<form action="index.php?c=admin&m=newsadd" method="post">
+		<table>
+			<tr>
+				<th colspan="2">发表新闻</th>
+			</tr>
+			<tr>
+				<td>标题</td>
+				<td>
+					<input type="text" name="title" value="{$data.title|default:''}" />
+				</td>
+			</tr>
+			<tr>
+				<td>内容</td>
+				<td>
+					<textarea name="content" id="content" cols="30" rows="10">
+						{$data.content|default:''}
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>作者</td>
+				<td>
+					<input type="text" name="author" value="{$data.author|default:''}" />
+				</td>
+			</tr>
+			<tr>
+				<td>出处</td>
+				<td>
+					<input type="text" name="from" value="{$data.from|default:''}" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="hidden" name="id" value="{$data.id|default:''}" />
+					<input type="submit" value="发布" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
