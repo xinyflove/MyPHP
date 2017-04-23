@@ -8,7 +8,7 @@ $objPHPExcel = new PHPExcel();
 
 // Set document properties
 $objPHPExcel->getProperties()
-    ->setCreator("affrey Xin")  // 创建人
+    ->setCreator("Caffrey Xin")  // 创建人
     ->setLastModifiedBy("Caffrey Xin")   // 最后修改人
     ->setTitle("导出模版")    // 标题
     ->setSubject("导出模版")  // 主题
