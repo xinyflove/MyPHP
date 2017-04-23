@@ -4,7 +4,7 @@
  * User: Caffrey
  * Date: 2017/4/17
  * Time: 16:49
- * 发送邮件类
+ * 发送邮件类,依赖PHPMailer
  */
 
 class Myemail{
