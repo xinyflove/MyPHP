@@ -10,3 +10,5 @@ Desc: 存放了自己平常用的php类、函数以及常用代码，方便以�
 -MyPHPFunction      ---------整理的php函数<br>
 -phpexcel           ---------Excel导入导出功能<br>
 -phpmailer          ---------邮件发送功能<br>
+-WebService-nusoap  ---------WebService之nusoap<br>
+-WebService-soap    ---------WebService之soap<br>
