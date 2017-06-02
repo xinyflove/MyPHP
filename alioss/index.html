@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+</head>
+<body>
+	<form method="post" action="app.php?op=upload&type=string" id="stringupload">
+		<input type="text" name="string">
+		<input type="submit">
+	</form>
+	<hr/>
+	<form method="post" action="app.php?op=upload&type=file" id="fileupload" enctype="multipart/form-data">
+		<input type="file" name="file" accept="image/png,image/gif,image/jpeg">
+		<input type="submit">
+	</form>
+	<hr/>
+	<form method="post" action="app.php?op=upload&type=string_add" id="stringaddupload">
+		<span>字符串追加上传</span>
+		<input type="submit">
+	</form>
+	<hr/>
+	<form method="post" action="app.php?op=upload&type=file_add" id="fileupload" enctype="multipart/form-data">
+		<input type="file" name="file_add[]" multiple="multiple" accept="text/plain">
+		<input type="submit">
+	</form>
+	<hr/>
+</body>
+</html>

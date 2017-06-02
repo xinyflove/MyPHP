@@ -5,6 +5,7 @@ E-maile: xinyflove@sina.com<br>
 Desc: 存放了自己平常用的php类、函数以及常用代码，方便以后使用<br>
 
 ## 目录说明
+-alioss           ---------阿里OSS<br>
 -CaffreyPHP         ---------搭建自己的PHP开发框架。<br>
 -class         ---------php类<br>
 -MyPHPClass         ---------整理的php常用类<br>
