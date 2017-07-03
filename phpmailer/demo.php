@@ -9,13 +9,41 @@
 
 class Myemail{
     private $mail;
-    private $protocol = 'smtp';
+    //private $protocol = 'smtp';
+    /**
+     * 邮件服务器的主机名
+     * @var string
+     */
     private $smtp_host = 'smtp.sina.com';
-    private $smtp_user = 'xinyftest@sina.com';
-    private $smtp_pass = 'test123456';
+    /**
+     * 端口
+     * @var string
+     */
     private $smtp_port = '25';
-    private $smtp_from_mail = 'xinyftest@sina.com';
+    /**
+     * 帐号
+     * @var string
+     */
+    private $smtp_user = '****test@sina.com';
+    /**
+     * 密码
+     * @var string
+     */
+    private $smtp_pass = '****123456';
+    /**
+     * 发送邮箱
+     * @var string
+     */
+    private $smtp_from_mail = '****@sina.com';
+    /**
+     * 发件人
+     * @var string
+     */
     private $smtp_from_user = 'Caffrey Service';
+    /**
+     * 邮件主题
+     * @var string
+     */
     private $smtp_subject = 'Caffrey Service邮件主题';
 
     public function __construct()
@@ -138,9 +166,9 @@ class Myemail{
     private function init()
     {
         $this->mail->CharSet    ="UTF-8";
-        //Tell PHPMailer to use SMTP
+        //Tell PHPMailer to use SMTP;通知PHPMailer用SMTP协议
         $this->mail->isSMTP();
-        //Enable SMTP debugging
+        //Enable SMTP debugging;使SMTP调试
         // 0 = off (for production use)
         // 1 = client messages
         // 2 = client and server messages
@@ -172,7 +200,7 @@ $mail = new Myemail();
 // 测试链接
 //$mail->testConnectSMTP();
 // 发送测试邮件
-//$mail->test('*****@qq.com', '***');
+//$mail->test('****@qq.com', '***');
 // 发送邮件
 //$mail->sendmail('Email Subject', '*****@qq.com', '***', '邮件内容哈哈');
 ?>
