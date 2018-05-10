@@ -14,6 +14,7 @@ Desc: 存放了自己平常用的php类、函数以及常用代码，方便以�
 -07token          ---------php token防止重复提交<br>
 -08alioss           ---------阿里OSS<br>
 -09testsmarty          ---------练习smarty<br>
+-10live_vod          ---------直播与点播<br>
 -CaffreyPHP         ---------搭建自己的PHP开发框架。<br>
 -class         ---------php类<br>
 -gd         ---------图像库处理<br>
