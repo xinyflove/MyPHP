@@ -7,8 +7,8 @@ class Alioss {
     private $bucket = 'caffrey-bucket01';
     
     public function __construct(){
-		$accessKeyId = "LTAIJRAPmN5cjwm0";
-		$accessKeySecret = "I3sl0PppTWpTmcApkpTq2YnEx5jd1b";
+		$accessKeyId = "accessKeyId";
+		$accessKeySecret = "accessKeySecret";
 		$endpoint = "oss-cn-shanghai.aliyuncs.com";
 
 		try {
